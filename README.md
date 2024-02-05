@@ -16,8 +16,8 @@ sudo yum install https://github.com/shigechika/nginx-module-pagespeed/releases/d
 
 ```
 rpmquery rpmdevtools || sudo yum install -y rpmdevtools && rpmdev-setuptree
-rpm -Uvh https://nginx.org/packages/mainline/centos/7/SRPMS/nginx-1.25.3-1.el7.ngx.src.rpm
-git clone https://github.com/shigechika/nginx-module-pagespeed.git
+rpm -Uvh https://nginx.org/packages/mainline/centos/9/SRPMS/nginx-1.25.3-1.el9.ngx.src.rpm
+git clone https://github.com/teoit/nginx-module-pagespeed.git
 cp nginx-module-pagespeed/PR1750.diff ~/rpmbuild/SOURCES/
 rpmquery openssl-devel libuuid-devel gcc-c++ || sudo yum install -y openssl-devel libuuid-devel gcc-c++
 rpmbuild -ba nginx-module-pagespeed/nginx-module-pagespeed.spec
